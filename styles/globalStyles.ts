@@ -25,6 +25,33 @@ export const GlobalStyles  = createGlobalStyle`
     }
   }
 
+  label {
+    font-size: 2rem;
+    color: #071F26;
+    font-weight: 500;
+  }
+
+  input, select, textarea {
+    display: block;
+    width: 100%;
+    background: #E7E4E4;
+    outline: none;
+    border-radius: .4rem;
+    border: 2px solid transparent;
+    height: 4.5rem;
+    padding: 0 20px;
+    margin: .5rem 0 2rem 0;
+    font-size: 1.6rem;
+    color: #071F26;
+    transition: all .2s ease-in-out;
+
+    &:hover, &:focus {
+      background: #FFF;
+      border: 2px solid #071F26;
+      box-shadow: 0 0 .6rem rgba(7, 31, 38, .35);
+    }
+  }
+
   button {
     cursor: pointer;
   }

@@ -1,16 +1,31 @@
 import Head from 'next/head';
 import { Container } from '../styles/globalStyles'
- 
+import { ContainerLogin ,ContentLogin, Divider } from '../styles/pages/index'
+
 export default function Home() {
   return (
     <>
     <Head>
       <title>Login</title>
     </Head>
-      <Container>
-        <h1>Hello World</h1>
+    <ContainerLogin>
+      <ContentLogin>
+        <section>
+          <h1>Login</h1>
 
-      </Container>
+        <Divider>OR</Divider>
+        <form>
+
+            <label htmlFor="">E-mail</label>
+            <input type="text"/>
+            <label htmlFor="">Password</label>
+            <input type="password"/>
+            <button type="submit">Sign In</button>
+          
+        </form>
+        </section>
+      </ContentLogin>
+    </ContainerLogin>
     </>
   )
 }
