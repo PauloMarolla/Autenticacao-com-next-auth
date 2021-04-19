@@ -27,7 +27,7 @@ export const GlobalStyles  = createGlobalStyle`
 
   label {
     font-size: 2rem;
-    color: #071F26;
+    color: ${({theme}) => theme.primary800};
     font-weight: 500;
   }
 
@@ -42,12 +42,12 @@ export const GlobalStyles  = createGlobalStyle`
     padding: 0 20px;
     margin: .5rem 0 2rem 0;
     font-size: 1.6rem;
-    color: #071F26;
+    color: ${({theme}) => theme.primary800};
     transition: all .2s ease-in-out;
 
     &:hover, &:focus {
       background: #FFF;
-      border: 2px solid #071F26;
+      border: 2px solid ${({theme}) => theme.primary800};
       box-shadow: 0 0 .6rem rgba(7, 31, 38, .35);
     }
   }

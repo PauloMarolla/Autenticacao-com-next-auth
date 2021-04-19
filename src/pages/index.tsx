@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Container } from '../styles/globalStyles'
-import { ContainerLogin ,ContentLogin, Divider } from '../styles/pages/index'
+import { ContainerLogin ,ContentLogin, Divider } from '../styles/pagesStyles/index'
 
 export default function Home() {
   return (
