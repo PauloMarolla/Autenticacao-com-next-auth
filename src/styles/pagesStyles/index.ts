@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darken, lighten, setLightness } from 'polished';
+import { setLightness } from 'polished';
 
 export const ContainerLogin = styled.div`
   width: 100%;

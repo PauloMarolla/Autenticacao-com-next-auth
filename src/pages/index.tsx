@@ -20,15 +20,15 @@ export default function Home() {
           <BtnLinkedin />
 
         <Divider>OR</Divider>
-        <form>
 
-            <label htmlFor="">E-mail</label>
-            <input type="text"/>
-            <label htmlFor="">Password</label>
-            <input type="password"/>
-            <button type="submit">Sign In</button>
-          
+        <form>
+          <label htmlFor="">E-mail</label>
+          <input type="text"/>
+          <label htmlFor="">Password</label>
+          <input type="password"/>
+          <button type="submit">Sign In</button>
         </form>
+        
         </section>
       </ContentLogin>
     </ContainerLogin>
