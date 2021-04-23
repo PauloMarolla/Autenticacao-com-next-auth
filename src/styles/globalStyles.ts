@@ -34,7 +34,7 @@ export const GlobalStyles  = createGlobalStyle`
   input, select, textarea {
     display: block;
     width: 100%;
-    background: #E7E4E4;
+    background: ${({theme}) => theme.background600};
     outline: none;
     border-radius: .4rem;
     border: 2px solid transparent;
@@ -46,7 +46,7 @@ export const GlobalStyles  = createGlobalStyle`
     transition: all .2s ease-in-out;
 
     &:hover, &:focus {
-      background: #FFF;
+      background: ${({theme}) => theme.white};
       border: 2px solid ${({theme}) => theme.primary800};
       box-shadow: 0 0 .6rem rgba(7, 31, 38, .35);
     }

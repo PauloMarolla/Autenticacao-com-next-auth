@@ -1,5 +1,7 @@
 import Head from 'next/head';
-import { Container } from '../styles/globalStyles'
+import { BtnDiscord } from '../components/BtnDiscord';
+import { BtnInstagram } from '../components/BtnInstagram';
+import { BtnLinkedin } from '../components/BtnLinkedin';
 import { ContainerLogin ,ContentLogin, Divider } from '../styles/pagesStyles/index'
 
 export default function Home() {
@@ -12,6 +14,10 @@ export default function Home() {
       <ContentLogin>
         <section>
           <h1>Login</h1>
+
+          <BtnInstagram />
+          <BtnDiscord />
+          <BtnLinkedin />
 
         <Divider>OR</Divider>
         <form>

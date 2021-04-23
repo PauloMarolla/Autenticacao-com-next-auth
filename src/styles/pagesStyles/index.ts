@@ -1,10 +1,15 @@
 import styled from 'styled-components';
+import { darken, lighten, setLightness } from 'polished';
 
 export const ContainerLogin = styled.div`
   width: 100%;
   height: 100vh;
   background: url('/bg-login.svg') center center;
   background-size: cover;
+
+  @media(max-width: 978px) {
+    background: ${({theme}) => theme.background500};
+  }
 `
 
 export const ContentLogin = styled.main`
@@ -12,6 +17,11 @@ export const ContentLogin = styled.main`
   grid-template-columns: 1fr 1.35fr;
   height: 100vh;
   grid-template-areas: '. form';
+  @media(max-width: 978px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   section {
     grid-area: form;
@@ -22,7 +32,7 @@ export const ContentLogin = styled.main`
 
     h1 {
       font-size: 5.4rem;
-      color: #13282E;
+      color: ${({theme}) => theme.primary700};
       font-weight: 600;
       padding-bottom: 4rem;
     }
@@ -33,14 +43,19 @@ export const ContentLogin = styled.main`
 
       button {
         height: 5.5rem;
-        background: #071F26;
-        color: #FFF;
+        background: ${({theme}) => theme.primary800};
+        color: ${({theme}) => theme.white};
         width: 100%;
         border: 0;
         border-radius: .4rem;
         box-shadow: 0 .3rem .8rem rgba(7, 31, 38, .35);
         font-size: 2rem;
         font-weight: 500;
+        transition: background .2s ease-in-out;
+
+        &:hover {
+          background: ${({theme}) =>  setLightness('0.14', theme.primary800)};
+        }
       }
     }
     
