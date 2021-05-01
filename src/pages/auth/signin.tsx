@@ -1,4 +1,4 @@
-import { getCsrfToken } from 'next-auth/client';
+import { getCsrfToken, useSession } from 'next-auth/client';
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
 import { getSession, csrfToken, providers, signin } from 'next-auth/client';
@@ -12,6 +12,8 @@ import { BtnDiscord } from '../../components/BtnDiscord';
 import { BtnLinkedin } from '../../components/BtnLinkedin';
 
 export default function SignIn({ csrfToken }) {
+  const [session, loading] = useSession();
+
   return (
     <>
       <Head>
@@ -21,7 +23,7 @@ export default function SignIn({ csrfToken }) {
         <ContentLogin>
           <section>
             <h1>Login</h1>
-            <h1>alou</h1>
+            <h1>{(session && session.user.email) ?? ''}</h1>
 
             <BtnInstagram />
             <BtnDiscord />
