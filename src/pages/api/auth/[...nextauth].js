@@ -6,10 +6,10 @@ import Providers from 'next-auth/providers'
 const options = {
   providers: [
     Providers.Credentials({
-      name: 'Custom Provider',
+      name: 'Credentials',
       credentials: {
-        email: { label: 'email', type: 'text', placeholder: 'teste' },
-        password: { label: 'password', type: 'password' },
+        email: { label: 'E-mail', type: 'text', placeholder: 'teste' },
+        password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
         try {
@@ -37,6 +37,13 @@ const options = {
       session.user = user.user;
         return Promise.resolve(session)
     }
+  },
+  pages: {
+    signIn: '/auth/signin',
+    signOut: '/auth/logout',
+    error: '/auth/error',
+    verifyRequest: '/auth/verify-request',
+    newUser: null
   },
   session: {
     jwt: true
