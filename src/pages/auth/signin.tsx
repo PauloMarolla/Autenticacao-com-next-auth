@@ -6,13 +6,13 @@ import {
   ContainerLogin,
   ContentLogin,
   Divider,
-} from '../../styles/pagesStyles';
+} from '../../styles/pagesStyles/signin';
 import { BtnInstagram } from '../../components/BtnInstagram';
 import { BtnDiscord } from '../../components/BtnDiscord';
 import { BtnLinkedin } from '../../components/BtnLinkedin';
 
 export default function SignIn({ csrfToken }) {
-  const [session, loading] = useSession();
+  const [session] = useSession();
 
   return (
     <>
@@ -55,7 +55,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
   if (session && res && session.acessToken) {
     res.writeHead(302, {
-      Location: '/',
+      Location: '/auth/signin',
     });
     res.end();
     return;
